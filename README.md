@@ -1,5 +1,7 @@
 # Snippetbox
 
+Backend built with Go and MySQL. Frontend build with HTML, CSS and JavaScript.
+
 MySQL stuff
 
 -- Create a new UTF-8 `snippetbox` database.
