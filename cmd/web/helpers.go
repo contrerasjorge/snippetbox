@@ -19,7 +19,6 @@ func (app *application) serverError(w http.ResponseWriter, err error) {
 
 func (app *application) clientError(w http.ResponseWriter, status int) {
 	http.Error(w, http.StatusText(status), status)
-
 }
 
 func (app *application) notFound(w http.ResponseWriter) {
@@ -34,7 +33,6 @@ func (app *application) addDefaultData(td *templateData, r *http.Request) *templ
 	td.CSRFToken = nosurf.Token(r)
 	td.CurrentYear = time.Now().Year()
 	td.Flash = app.session.PopString(r, "flash")
-
 	td.IsAuthenticated = app.isAuthenticated(r)
 
 	return td
